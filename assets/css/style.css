@@ -128,11 +128,11 @@ main .container {
   color: var(--white);
 }
 
-.results {
+#results {
   background: var(--soft-orange);
 }
 
-.results .container {
+#results .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -164,13 +164,13 @@ main .container {
   font-weight: 300;
 }
 
-.divulgation .container {
+#divulgation .container {
   display: flex;
   justify-content:space-between;
   
 }
 
-.divulgation img {
+#divulgation img {
   width: 20%;
 }
 
@@ -195,7 +195,168 @@ main .container {
   font-weight: 600;
 }
 
+#home-info .container {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.home-img {
+  width: 50%;
+}
+
+.home-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.home-text {
+  width: 50%;
+  
+}
+
+.home-text h2 {
+  font-size: 2.5rem;
+}
+
+.home-text p {
+  margin: 20px 0;
+  color: var(--color-p);
+}
+
+.home-text span {
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 10px;
+  
+}
+
+
+.location-text p {
+  color: var(--light-grenn);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.location-text h2 {
+  font-size: 2.5rem;
+  
+}
+
+#location-info {
+  text-align: center;
+  margin-top: 3rem;
+  
+}
+
+#location-info a {
+  font-size: 1.5rem;
+  color: #000;
+  
+  
+}
+
+#location-info a:hover {
+  border-bottom: 2px solid var(--soft-orange);
+  transition: .6s;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+}
+
+.cards-items {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+.cards-items .district {
+  color: var(--color-p);
+}
+
+.cards-items .location {
+  font-size: 30px;
+  font-weight: 500;
+  
+}
+
+.cards-items .contact {
+  font-weight: 500;
+}
+
+
+.cards-items img {
+  width: 20%;
+}
+
+.cards-items button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: var(--white);
+  background: var(--soft-orange);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cards-items button:hover {
+  background: var(--very-green);
+  color: var(--white);
+  transition: .6s;
+}
+
+#newsletter {
+  background: var(--light-grenn);
+}
+
+.box-newsletter {
+  text-align: center;
+  background-image: url('../image/background-newsletter.png');
+  padding: 7rem;
+  background-size: cover;
+  border-radius: 15px;
+  background-position: center;
+}
+
+.box-newsletter h2 {
+  font-size: 2.5rem;
+}
+
+.box-newsletter p {
+  margin: 13px 0;
+}
+
+.box-newsletter input {
+  width: 35%;
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  color: #000;
+  background-color: #faefda;
+
+}
+
+.box-newsletter button {
+  font-size: 15px;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: var(--light-grenn);
+  color: var(--white);
+  cursor: pointer;
+}
+
 @media (max-width: 960px) {
+
   .btn-menu {
     display: block;
   }
@@ -216,6 +377,7 @@ main .container {
     transition: 0.3s;
     flex-direction: column;
     justify-content: center;
+    
   }
 
   .ul li a {
@@ -231,6 +393,7 @@ main .container {
   }
   .active {
     left: 0;
+    position: absolute;
   }
 
   .container {
@@ -265,18 +428,58 @@ main .container {
     margin-top: 3rem;
   }
 
-  .divulgation {
+  #divulgation {
     flex-direction: column;
     align-items: center;
   }
 
-  .divulgation .card {
+  #divulgation .card {
     width: 100%;
     text-align: center;
   }
+
+  #home-info .container {
+    flex-direction: column-reverse;
+  }
+
+  .home-text,
+  .home-img{
+    width: 100%;
+    
+  }
+
+  .home-text span {
+    justify-content: center;
+  }
+
+  #home-location {
+    flex-direction: column;
+  }
+
+  .cards-items {
+    width: 100%;
+  }
+  
+  .box-newsletter {
+    padding: 4rem;
+  }
+
+
+  .box-newsletter h2 {
+    font-size: 2rem;
+  }
+
+  .box-newsletter input {
+    width: 65%;
+    margin-bottom: 20px;
+  }
+
+  .box-newsletter button {
+    width: 65%;
+  }
 }
 
-@media (max-width: 412px) {
+@media (max-width: 490px) {
   .results-numbers {
     flex-direction: column;
   }
@@ -292,5 +495,28 @@ main .container {
   .main-img {
     margin-top: 2rem;
   }
+
+  .box-newsletter h2 {
+    font-size: 1rem;
+  }
+
+  .box-newsletter {
+    padding:2rem;
+  }
+
+  .box-newsletter input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .box-newsletter button {
+    width: 100%;
+  }
+
 }
 
+@media (max-width: 365px) {
+  .box-newsletter {
+    padding: 1rem;
+  }
+}
